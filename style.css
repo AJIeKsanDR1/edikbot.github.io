@@ -39,6 +39,7 @@ header, footer {
 header h1, footer p {
     margin: 0;
     color: #333; /* Темно-серый текст */
+    font-size: 14px;
 }
 
 main {

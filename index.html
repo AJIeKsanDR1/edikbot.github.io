@@ -7,20 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Модальное окно для оформления заказа -->
-<div id="orderModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('orderModal')">&times;</span>
-      <h2>Оформление заказа</h2>
-      <form id="orderForm">
-        <label for="phone">Номер телефона:</label>
-        <input type="tel" id="phone" name="phone" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <button type="submit">Оформить</button>
-      </form>
-    </div>
-  </div>
     <header>
         <h1> Магазин бытовой техники</h1>
         <img id="light-theme-toggle" src="white1.png" alt="Белая тема">
@@ -34,15 +20,30 @@
         <!-- Cart items will be listed here -->
     </ul>
     <p>Итого: <span id="cart-total">0</span> ₸</p>
-    <button id="checkout-button" onclick="openModal('orderModal')">Оформить заказ</button>
+    <button id="checkout-button">Оплатить</button>
     <button id="clear-cart-button">Очистить всё</button>
 </section>
 
             <div id="modal1" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Характеристики товара 1</p>
-                <p>Характеристики товара 1</p>
+                <p>Габариты Высота, см 85</p>
+                <p>Ширина см 60 </p>
+                <p>Грубина см 44 </p>
+                <p>Вес кг 60 </p>
+                <p>Специальные Программы:
+                    <li>Быстрая стирка</li>
+                    <li>Деликатная стирка</li>
+                    <li>Детские вещи</li>
+                    <li>Хлопок Макс</li>
+                        <li>Хлопок</li>
+                            <li>Освежить</li>
+                                <li>Полоскание + отжим</li>
+                                    <li>Ручная стирка</li>
+                                        <li>Спортивная одежда</li>
+                                            <li>Стирка смешанных тканей</li> </p>
+                <p>Сливной шланг:есть </p>
+                <p>Шланг подачи воды:есть </p>
                 </div>
             </div>
             
@@ -50,21 +51,39 @@
             <div id="modal2" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Характеристики товара 2</p>
+                <p>Габариты Высота, см 203</p>
+                <p>Ширина см 60 </p>
+                <p>Грубина см 65 </p>
+                <p>Вес кг 71 </p>
+                <p>Количество полок 4</p>
+                <p>Материал полок: заколонное стекло</p>
+                <p>Обьём холодильной камеры 273 </p>
+                <p>Система размораживания холодильной камеры:No frost</p>
                 </div>
             </div>
 
             <div id="modal3" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Характеристики товара 3</p>
+                <p>Звуковой сигнал: ДА</p>
+                <p>Отсрочка старта: НЕТ</p>
+                <p>Инверторная технология: НЕТ</p>
+                <p>Блокировка панели: ДА</p>
+                <p>Приготовление на пару:НЕТ</p>
                 </div>
             </div>
 
             <div id="modal4" class="modal">
                 <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Характеристики товара 4</p>
+                <p>Габариты Высота, см 60</p>
+                <p>Ширина см 60 </p>
+                <p>Грубина см 55 </p>
+                <p> Энергопотребление, кВт/ч: 0.79</p>
+                <p>Количество программ 7</p>
+                <p>Гриль: ДА</p>
+                <p>Максимальная температура: 275 </p>
+                <p>Тип управления:Электрический</p>
                 </div>
             </div>
 
@@ -76,7 +95,7 @@
                 <h2>Стиральная машина LG F-2M5HS6S</h2>
                 <button onclick="openModal('modal1')">Показать характеристики</button>
                 <p>Цена: ₸244999</p>
-                <button class="add-to-cart">Добавить в корзину</button>
+                <button>Добавить в корзину</button>
             </article>
 
             <!-- Graphics Card -->
@@ -85,7 +104,7 @@
                 <h2>Холодильник Samsung RB-38T7762SA</h2>
                 <button onclick="openModal('modal2')">Показать характеристики</button>
                 <p>Цена: ₸414 990</p>
-                <button class="add-to-cart">Добавить в корзину</button>
+                <button>Добавить в корзину</button>
             </article>
 
             <!-- Motherboard -->
@@ -94,7 +113,7 @@
                 <h2>Микроволновая печь LG MS-2044V</h2>
                 <button onclick="openModal('modal3')">Показать характеристики</button>
                 <p>Цена: ₸52990</p>
-                <button class="add-to-cart">Добавить в корзину</button>
+                <button>Добавить в корзину</button>
             </article>
 
             <!-- RAM Module -->
@@ -103,14 +122,14 @@
                 <h2>Встраиваемая духовка Bosch HBJ-558YB0Q</h2>
                 <button onclick="openModal('modal4')">Показать характеристики</button>
                 <p>Цена: ₸389990</p>
-                <button class="add-to-cart">Добавить в корзину</button>
+                <button>Добавить в корзину</button>
             </article>
 
             <!-- Добавьте дополнительные продукты здесь -->
         </section>
     </main>
     <footer>
-        <p>© 2024 PC Components LRShop</p>
+        <p>© 2024 Magazin Bitovoi tehniki TechShop</p>
     </footer>
     <script src="script.js"></script>
 </body>

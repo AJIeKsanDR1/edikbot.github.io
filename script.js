@@ -93,6 +93,21 @@ document.querySelectorAll('.product .add-to-cart').forEach(button => {
     });
 });
 
+document.getElementById('light-theme-toggle').addEventListener('click', function() {
+    document.documentElement.setAttribute('data-theme', 'light');
+});
+
+document.getElementById('dark-theme-toggle').addEventListener('click', function() {
+    document.documentElement.setAttribute('data-theme', 'dark');
+});
+
+document.getElementById('orange-theme-toggle').addEventListener('click', function() {
+    document.documentElement.setAttribute('data-theme', 'orange');
+});
+
+// По умолчанию можно использовать светлую тему
+document.documentElement.setAttribute('data-theme', 'light');
+
 document.getElementById('orderForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const phone = document.getElementById('phone').value;

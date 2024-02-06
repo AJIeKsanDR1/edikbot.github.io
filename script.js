@@ -94,19 +94,24 @@ document.querySelectorAll('.product .add-to-cart').forEach(button => {
 });
 
 document.getElementById('light-theme-toggle').addEventListener('click', function() {
-    document.documentElement.setAttribute('data-theme', 'light');
+    document.body.classList.remove('dark-theme', 'orange-theme');
+    document.body.classList.add('light-theme');
 });
 
+// Обработчик события для кнопки темной темы
 document.getElementById('dark-theme-toggle').addEventListener('click', function() {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.body.classList.remove('light-theme', 'orange-theme');
+    document.body.classList.add('dark-theme');
 });
 
+// Обработчик события для кнопки темно-оранжевой темы
 document.getElementById('orange-theme-toggle').addEventListener('click', function() {
-    document.documentElement.setAttribute('data-theme', 'orange');
+    document.body.classList.remove('light-theme', 'dark-theme');
+    document.body.classList.add('orange-theme');
 });
 
 // По умолчанию можно использовать светлую тему
-document.documentElement.setAttribute('data-theme', 'light');
+document.body.classList.add('light-theme');
 
 document.getElementById('orderForm').addEventListener('submit', function(e) {
     e.preventDefault();
